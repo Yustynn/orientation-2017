@@ -1,0 +1,31 @@
+{% include header.html %}
+{{ page.content }}
+
+<section class='hero'>
+  <h1>Welcome to the Grid</h1>
+  <div>LOGOS</div>
+  <p>The Grid is a virtual world. Every year, a prestigious survival competition, The Tachyon Games, would be held, attracting players from all over to enter the Grid. Under the guidance of past Tachyon Games’ winners, Champions, players would fight for the glory of their clans. Simulating alternate realities, filled with hostile environments and treacherous situations, the Grid would test and push participants past their limits.</p>
+  {% for clan in site.clans %}
+</section>
+<section class='clan-info'>
+  <article class={{ clan.title | downcase }}>
+    <div class='description'>
+      <h3>{{ clan.tagline }}</h3>
+      <p>{{ clan.content }}</p>
+    </div>
+    <div class='overview'>
+      <h2>{{ clan.title }}</h2>
+      <div class='attributes'>
+        {% for attribute in clan.attributes %}
+        <div class='attribute'>
+          <h4>{{ attribute[0] }}</h4>
+          <div style='width: {{ attribute[1] }}0%'></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+{% include footer.html %}
