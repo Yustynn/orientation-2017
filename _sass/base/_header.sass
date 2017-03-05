@@ -1,0 +1,35 @@
+$APPLY_BG_COLOR: #5C7C08
+$HEADER_PADDING: 20px
+$MENU_ITEM_COLOR: #A9A7A5
+
+header
+  background: #121419
+  padding-bottom: $HEADER_PADDING
+  padding-top: $HEADER_PADDING
+  @extend .column
+
+  // main menu item
+  li a
+    color: $MENU_ITEM_COLOR
+    font-size: 18px
+    font-weight: 600
+    padding-left: 40px
+    text-transform: uppercase
+
+    &:hover
+      color: white
+
+  .apply
+    align-self: flex-end
+    background-color: $APPLY_BG_COLOR
+    font-size: 14px
+    padding: 2px 10px
+
+    a
+      color: white
+      i
+        padding-right: 5px
+
+  .main-menu
+    align-self: flex-start
+    @extend .row
