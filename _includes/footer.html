@@ -1,2 +1,11 @@
 <footer>
-  <p>&copy; The Singapore University of Technology & Design 2017</p>
+  <p>&copy; The Singapore University of Technology & Design 2017 {{assetpath}}</p>
+</footer>
+
+{% if page.custom_js %}
+{% for filename in page.custom_js %}
+<script src='/assets/js/{{ filename }}.js'></script>
+{% endfor %}
+{% endif %}
+</body>
+</html>
