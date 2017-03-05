@@ -5,7 +5,7 @@
   <h1>Welcome to the Grid</h1>
   <div class='row'>
     {% for clan in site.clans %}
-    <img src='/assets/images/{{ clan.title | downcase }}.svg' />
+    <img src='/assets/images/{{ clan.title | downcase }}.png' />
     {% endfor %}
   </div>
   <p>The Grid is a virtual world. Every year, a prestigious survival competition, The Tachyon Games, would be held, attracting players from all over to enter the Grid. Under the guidance of past Tachyon Games’ winners, Champions, players would fight for the glory of their clans. Simulating alternate realities, filled with hostile environments and treacherous situations, the Grid would test and push participants past their limits.</p>
@@ -15,23 +15,25 @@
   {% for clan in site.clans %}
 
   <article class='{{ clan.title | downcase }} clan row'>
-    <div class='description'>
+    <div class='column description'>
       <h3>{{ clan.tagline }}</h3>
       <p>{{ clan.content }}</p>
     </div>
 
-    <div class='overview'>
-      <img src="/assets/images/{{ clan.title | downcase }}.svg" />
+    <div class='column overview'>
+      <img src="/assets/images/{{ clan.title | downcase }}.png" />
       <h2>{{ clan.title }}</h2>
 
-      <div class='attributes'>
-        {% for attribute in clan.attributes %}
-        <div class='attribute'>
-          <h4>{{ attribute[0] }}</h4>
-          <div style='width: {{ attribute[1] }}0%'></div>
-        </div>
-        {% endfor %}
-      </div>
+
+        <svg class='attributes' height="200" width="350">
+          {% for attribute in clan.attributes %}
+          <g class='attribute-bar'>
+            <rect class='background' width="300" height="20" x="50" y="{{ forloop.index | times: 30 }}"></rect>
+            <rect class='amount' width="{{ attribute[1] | times: 3}}0" height="20" x="50" y="{{ forloop.index | times: 30 }}"></rect>
+            <text x="5" y="{{ forloop.index | times: 30 }}" dy="1em">{{attribute[0]}}</text>
+          </g>
+          {% endfor %}
+        </svg>
 
     </div>
 

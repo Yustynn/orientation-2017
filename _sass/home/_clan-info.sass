@@ -1,5 +1,5 @@
 =color_clan($color)
-  $alt_color: scale-color($color, $lightness: -80%, $saturation: 10%)
+  $alt_color: scale-color($color, $lightness: -70%, $saturation: 10%)
 
   p, h3
     color: $alt_color
@@ -14,13 +14,57 @@
   .overview
     background-color: $GRAY
 
+  .attribute-bar
+    text, .amount
+      fill: $color
+
+.clan-info
+  padding: 0
 
 .clan
+  align-items: stretch
+
+  & > div
+    padding-left: 100px
+    padding-right: 100px
+
+  h2
+    font-size: 32px
+    padding: 0 40px
+
+  h3
+    font-size: 70px
+    padding-bottom: 20px
+
+  h4
+    font-size: 18px
+    font-family: 'Open Sans'
+    font-weight: 600
+    text-transform: uppercase
+
+  p
+    font-size: 18px
+    margin: 0
+
+  img
+    padding: 30px
+
+  .attributes
+    // width: 100%
+  .attribute-bar
+    text
+      text-transform: uppercase
+    .background
+      fill: #424242
+      // width: 100%
+
+
+
   .description
-    flex: 3
+    flex: 2
 
   .overview
-    flex: 2
+    flex: 1
 
   &.aqua
     +color_clan($AQUA_COLOR)
