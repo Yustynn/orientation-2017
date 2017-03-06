@@ -1,4 +1,8 @@
-{% include header.html %}
+{% if page.title == 'countdown' %}
+  {% include countdown-header.html %}
+{% else %}
+  {% include header.html %}
+{% endif %}
 {{ page.content }}
 
 <section class='hero container'>
@@ -28,8 +32,8 @@
         <svg class='attributes' height="200" width="350">
           {% for attribute in clan.attributes %}
           <g class='attribute-bar'>
-            <rect class='background' width="300" height="20" x="50" y="{{ forloop.index | times: 30 }}"></rect>
-            <rect class='amount' width="{{ attribute[1] | times: 3}}0" height="20" x="50" y="{{ forloop.index | times: 30 }}"></rect>
+            <rect class='background' width="100%" height="20" x="50" y="{{ forloop.index | times: 30 }}"></rect>
+            <rect class='amount' width="{{ attribute[1] }}0%" height="20" x="50" y="{{ forloop.index | times: 30 }}"></rect>
             <text x="5" y="{{ forloop.index | times: 30 }}" dy="1em">{{attribute[0]}}</text>
           </g>
           {% endfor %}

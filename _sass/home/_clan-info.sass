@@ -1,3 +1,5 @@
+$OVERVIEW_PADDING: 50px
+
 =color_clan($color)
   $alt_color: scale-color($color, $lightness: -70%, $saturation: 10%)
 
@@ -65,6 +67,9 @@
 
   .overview
     flex: 1
+    padding:
+      top: $OVERVIEW_PADDING
+      bottom: $OVERVIEW_PADDING
 
   &.aqua
     +color_clan($AQUA_COLOR)

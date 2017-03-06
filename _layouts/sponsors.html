@@ -1,0 +1,15 @@
+{% include header.html %}
+<div class='container'>
+  <h1>Our Wonderful Sponsors</h1>
+  <h2>Who made this orientation possible</h2>
+  <div>
+    {% for image-name in sponsor-image-names %}
+    {% if forloop.index | modulo: 3 == 0}
+  </div>
+  <div>
+    {% endif %}
+    <img src='/assets/images/{{ image-name }}.png' />
+    {% endfor %}
+  </div>
+</div>
+{% include footer.html %}
