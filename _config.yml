@@ -34,8 +34,11 @@ exclude:
   - Gemfile.lock
 
 collections:
-  - clans
-  - days
+  clans:
+    output: false
+  days:
+    output: true
+
 sass:
   sass_dir: _sass
   # style: compressed

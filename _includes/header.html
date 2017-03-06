@@ -16,7 +16,7 @@
 
 </head>
 
-<body class='{{ page.title }}'>
+<body class='{{ page.title }} {{ page.layout }}'>
   <header class='container column'>
     <div class='apply'>
       {% if page.title == 'countdown' %}
@@ -34,7 +34,7 @@
 
       <div class='main-menu'>
         <div class='logo'>
-          <a href='index.html'><img src='/assets/images/main-logo.png' /></a>
+          <a href='index.html'><img src='/assets/media/main-logo.png' /></a>
         </div>
         <nav class='main-menu'>
           <ul>
@@ -43,10 +43,8 @@
               <li><a href="http://www.sutd.edu.sg/Education/Unique-Academic-Structure">About</a></li>
               <li><a href="http://www.sutd.edu.sg/About-Us/Contact-Us">Support</a></li>
             {% else %}
-              <li><a href="/day1.html">Day 1</a></li>
-              <li><a href="/day2.html">Day 2</a></li>
-              <li><a href="/day3.html">Day 3</a></li>
               <li><a href="/sponsors.html">Sponsors</a></li>
+              <li><a href="/countdown.html">Countdown (for demo)</a></li>
             {% endif %}
           </ul>
         </nav>

@@ -6,7 +6,7 @@
   <h1>Welcome to the Grid</h1>
   <div class='row'>
     {% for clan in site.clans %}
-    <img src='/assets/images/clan-logos/{{ clan.title | downcase }}.png' />
+    <img src='/assets/media/clan-logos/{{ clan.title | downcase }}.png' />
     {% endfor %}
   </div>
   <p>The Grid is a virtual world. Every year, a prestigious survival competition, The Tachyon Games, would be held, attracting players from all over to enter the Grid. Under the guidance of past Tachyon Games’ winners, Champions, players would fight for the glory of their clans. Simulating alternate realities, filled with hostile environments and treacherous situations, the Grid would test and push participants past their limits.</p>
@@ -22,10 +22,8 @@
     </div>
 
     <div class='column overview'>
-      <img src="/assets/images/clan-logos/{{ clan.title | downcase }}.png" />
+      <img src="/assets/media/clan-logos/{{ clan.title | downcase }}.png" />
       <h2>{{ clan.title }}</h2>
-
-
         <svg class='attributes' height="200" width="350">
           {% for attribute in clan.attributes %}
           <g class='attribute-bar'>
