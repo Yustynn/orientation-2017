@@ -23,16 +23,11 @@ let isCalled = false;
 const updateDigits = (msElapsed = 0) => {
   const secondsDiff = (ORIENTATION_START_DATE.getTime() - currDate.getTime() - msElapsed) / 1000;
 
-  const seconds = secondsDiff % 60,
-        minutes = secondsDiff / 60 % 60,
-        hours = secondsDiff / 60 / 60 % 24,
-        days = secondsDiff / 60 / 60 / 24;
-
   const timeData = {
-    days,
-    hours,
-    minutes,
-    seconds
+    seconds: secondsDiff % 60,
+    minutes: secondsDiff / 60 % 60,
+    hours: secondsDiff / 60 / 60 % 24,
+    days: secondsDiff / 60 / 60 / 24,
   };
 
   Object.keys(timeData).forEach((t) => {

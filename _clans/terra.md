@@ -4,8 +4,8 @@ tagline: "Firm and Strong"
 attributes:
   int: 3
   str: 6
-  dex: 9
-  con: 5
+  dex: 6
+  con: 8
   wis: 2
 ---
 

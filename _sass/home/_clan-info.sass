@@ -8,7 +8,7 @@ $OVERVIEW_PADDING: 50px
 
   h2
     background-color: $color
-    color: $GRAY
+    color: $alt_color
 
   .description
     background-color: $color
@@ -88,3 +88,28 @@ $OVERVIEW_PADDING: 50px
 // put overview on the left for odd clans
 .clan:nth-child(even) .overview
   order: -1
+
+@media all and (max-width: $MOBILE)
+  .attributes
+    transform: scale(0.75)
+
+  .clan
+    h3
+      font-size: 36px
+
+    p
+      font-size: 14px
+      padding-left: 30px
+      padding-right: 30px
+
+    img
+      padding: 0
+
+    .overview
+      order: -1
+      padding-bottom: 0
+
+    & > div
+      padding: 0
+      padding-bottom: 30px
+      padding-top: 30px

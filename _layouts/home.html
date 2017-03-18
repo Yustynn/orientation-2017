@@ -4,7 +4,7 @@
 
 <section class='hero container'>
   <h1>Welcome to the Grid</h1>
-  <div class='row'>
+  <div class='row clan-logos'>
     {% for clan in site.clans %}
     <img src='/assets/media/clan-logos/{{ clan.title | downcase }}.png' />
     {% endfor %}
@@ -15,7 +15,7 @@
 <section class='clan-info'>
   {% for clan in site.clans %}
 
-  <article class='{{ clan.title | downcase }} clan row'>
+  <article class='{{ clan.title | downcase }} clan row mobile-column'>
     <div class='column description'>
       <h3>{{ clan.tagline }}</h3>
       <p>{{ clan.content }}</p>
