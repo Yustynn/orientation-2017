@@ -1,0 +1,21 @@
+.main-pics
+  padding: 0
+
+  div
+    background:
+      position: center
+      size: cover
+    min-height: 350px
+    flex: 1
+
+    &:first-child
+      background-image: url('https://i.imgur.com/brVFPH1.jpg')
+
+    &:nth-child(2)
+      background-image: url('https://i.imgur.com/IsVNSHZ.jpg')
+
+
+@media all and (max-width: $MOBILE)
+  .main-pics
+    div
+      width: 100%
