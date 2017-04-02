@@ -17,22 +17,8 @@
 </head>
 
 <body class='{{ page.title }} {{ page.layout }}'>
-  <header class='column'>
-    <div class='container apply'>
-      {% if page.title == 'countdown' %}
-        <a href="http://sutd.edu.sg/apply">
-          <i class="fa fa-download fa-lg"></i>
-          Apply to SUTD
-        </a>
-      {% else %}
-        <a href="https://www.facebook.com/groups/522995557746987/">
-          <i class="fa fa-download fa-facebook"></i>
-          SUTD Family
-        </a>
-      {% endif %}
-    </div>
-
-      <div class='container main-menu'>
+  <header class='row container space-between'>
+      <div class='main-menu'>
         <div class='logo'>
           <a href='index.html'><img src='/assets/media/main-logo.png' /></a>
         </div>
@@ -48,5 +34,14 @@
             {% endif %}
           </ul>
         </nav>
+      </div>
+
+      <div class='social-media'>
+          <a href="https://www.facebook.com/sutdorientation">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="http://www.pictaram.com/user/sutd_orientation_2017_/4544470290">
+            <i class="fa fa-instagram"></i>
+          </a>
       </div>
   </header>

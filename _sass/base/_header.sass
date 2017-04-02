@@ -3,10 +3,11 @@ $HEADER_PADDING: 20px
 $MENU_ITEM_COLOR: #A9A7A5
 
 header
+  @extend .column
   background: #121419
   padding-bottom: $HEADER_PADDING
   padding-top: $HEADER_PADDING
-  @extend .column
+  justify-content: space-between
 
   img
     height: 50px
@@ -22,17 +23,17 @@ header
     &:hover
       color: white
 
-  .apply
-    align-self: flex-end
-    background-color: $ALT_LINK_BG_COLOR
-    font-size: 14px
+  .social-media
+    align-self: center
+    font-size: 20px
     padding: 2px 10px
-    margin-right: 10%
 
     a
-      color: white
-      i
-        padding-right: 5px
+      color: $MENU_ITEM_COLOR
+      padding-left: 10px
+
+      &:hover
+        color: white
 
   .main-menu
     align-self: flex-start
