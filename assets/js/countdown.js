@@ -11,6 +11,8 @@ const getDigits = (time) => {
 
 const $ = document.querySelectorAll.bind(document); // let's pretend we loaded jQuery
 const currDate = new Date( Date.now() );
+
+const countdownSection = $('section.countdown')[0];
 const digits = {};
 
 ['days', 'hours', 'minutes', 'seconds'].forEach((t) => {
@@ -22,6 +24,10 @@ let isCalled = false;
 // updates digits every second once called
 const updateDigits = (msElapsed = 0) => {
   const secondsDiff = (ORIENTATION_START_DATE.getTime() - currDate.getTime() - msElapsed) / 1000;
+  if (secondsDiff < 0){
+      console.log(secondsDiff);
+      countdownSection.remove()
+  }
 
   const timeData = {
     seconds: secondsDiff % 60,
