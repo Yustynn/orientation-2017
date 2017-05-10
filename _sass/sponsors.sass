@@ -30,20 +30,22 @@
     align-items: stretch
 
     img
-      height: 150px
+      max-height: 150px
       width: auto
     .row
       justify-content: space-between
       padding-bottom: 10px
 
-@media all and (max-width: $MOBILE)
+@media all and (max-width: $TABLET)
   .sponsors
     h1
       font-size: 48px
 
     h2
       font-size: 18px
-      padding: 0
+      padding:
+        left: 10px
+        right: 10px  
 
     .logos > div
       flex-direction: column

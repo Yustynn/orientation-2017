@@ -1,3 +1,5 @@
+$LARGE_IMG_HEIGHT: 600px
+
 =color_clan($color)
   $alt_color: scale-color($color, $saturation: 100%, $lightness: -30%)
   h1
@@ -6,21 +8,29 @@
     background-color: $alt_color
   .overlay
     background-color: scale-color($color, $alpha:-50%, $lightness: 30%)
+.aqua
+  +color_clan($AQUA_COLOR)
+.ferrum
+  +color_clan($FERRUM_COLOR)
+.ignis
+  +color_clan($IGNIS_COLOR)
+.terra
+  +color_clan($TERRA_COLOR)
+.ventus
+  +color_clan($VENTUS_COLOR)
+
+.overlay
+  position: absolute
+  z-index: 2
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  flex: 1
 
 .video
   padding: 0
   position: relative
-
-  &.aqua
-    +color_clan($AQUA_COLOR)
-  &.ferrum
-    +color_clan($FERRUM_COLOR)
-  &.ignis
-    +color_clan($IGNIS_COLOR)
-  &.terra
-    +color_clan($TERRA_COLOR)
-  &.ventus
-    +color_clan($VENTUS_COLOR)
 
   video
     position: relative
@@ -34,11 +44,24 @@
     padding: 10px 80px
     text-transform: uppercase
 
-  .overlay
-    position: absolute
-    z-index: 2
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    flex: 1
+
+
+.pics
+  padding: 0
+  .row, .column
+    width: 100%
+
+  .large
+    height: $LARGE_IMG_HEIGHT
+    width: 100%
+
+  .small
+    height: $LARGE_IMG_HEIGHT / 2
+    width: 100%
+
+  .large, .small
+    position: relative
+
+  .pic
+    background-size: cover
+    height: inherit
