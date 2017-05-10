@@ -1,13 +1,15 @@
 $LARGE_IMG_HEIGHT: 600px
+$IMG_HEIGHT_MOBILE: 300px
 
 =color_clan($color)
   $alt_color: scale-color($color, $saturation: 100%, $lightness: -30%)
   h1
     color: $alt_color
-  a
+  .all-pics-btn
     background-color: $alt_color
   .overlay
     background-color: scale-color($color, $alpha:-50%, $lightness: 30%)
+
 .aqua
   +color_clan($AQUA_COLOR)
 .ferrum
@@ -19,7 +21,7 @@ $LARGE_IMG_HEIGHT: 600px
 .ventus
   +color_clan($VENTUS_COLOR)
 
-.overlay
+.overlay, .tagline
   position: absolute
   z-index: 2
   top: 0
@@ -45,7 +47,6 @@ $LARGE_IMG_HEIGHT: 600px
     text-transform: uppercase
 
 
-
 .pics
   padding: 0
   .row, .column
@@ -62,6 +63,35 @@ $LARGE_IMG_HEIGHT: 600px
   .large, .small
     position: relative
 
+    .tagline
+      display: none
+      position: absolute
+      left: 50%
+      text-align: center
+      top: 50%
+      transform: translate(-50%)
+
+      a
+        font-size: 30px
+        text-transform: uppercase
+
+    &:hover .tagline
+      display: block
+
   .pic
     background-size: cover
     height: inherit
+
+@media all and (max-width: $MOBILE)
+  .video
+    video
+      max-width: 100%
+
+    h1
+      font-size: 48px
+    a
+      font-size: 12px
+      padding: 10px 50px
+  .pics
+    .large, .small
+      height: $IMG_HEIGHT_MOBILE
