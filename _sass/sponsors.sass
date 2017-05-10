@@ -6,22 +6,22 @@
       top: 50px
       bottom: 50px
 
-    h1
-      color: $GRAY
+  h1
+    color: $GRAY
 
-    h2
-      background-color: $GRAY
-      color: $LIGHT_GRAY
-      display: inline
-      font:
-        family: 'Open Sans'
-        size: 36px
-        weight: 400
-      letter-spacing: 2px
-      padding:
-        left: 60px
-        right: 60px
-      text-transform: uppercase
+  h2
+    background-color: $GRAY
+    color: $LIGHT_GRAY
+    display: inline
+    font:
+      family: 'Open Sans'
+      size: 36px
+      weight: 400
+    letter-spacing: 2px
+    padding:
+      left: 60px
+      right: 60px
+    text-transform: uppercase
 
   .content
     padding-top: 50px
@@ -35,3 +35,15 @@
     .row
       justify-content: space-between
       padding-bottom: 10px
+
+@media all and (max-width: $MOBILE)
+  .sponsors
+    h1
+      font-size: 48px
+
+    h2
+      font-size: 18px
+      padding: 0
+
+    .logos > div
+      flex-direction: column
