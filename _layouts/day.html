@@ -11,44 +11,24 @@
 </section>
 
 <section class='pics column'>
-    <div class='row mobile-column'>
-      <div class='large aqua'>
-        <div class='pic' style="background-image: url('/assets/media/day-1/design.jpg')"></div>
+  {% for row in page.pics %}
+  <div class='row mobile-column'>
+    <div class='large {{ row.large.theme }}'>
+      <div class='pic' style="background-image: url('/assets/media/day-{{ page.day-number }}/{{ row.large.filename }}')"></div>
+      <div class='overlay'></div>
+      <div class='tagline'><a>Haha lol funny</a></div>
+    </div>
+    <div class='column'>
+      {% for image in row.small %}
+      <div class='small ferrum'>
+        <div class='pic' style="background-image: url('/assets/media/day-{{ page.day-number }}/{{ image.filename }}')"></div>
         <div class='overlay'></div>
         <div class='tagline'><a>Haha lol funny</a></div>
       </div>
-      <div class='column'>
-        <div class='small ferrum'>
-          <div class='pic' style="background-image: url('/assets/media/day-1/housing.jpg')"></div>
-          <div class='overlay'></div>
-          <div class='tagline'><a>Haha lol funny</a></div>
-        </div>
-        <div class='small ignis'>
-          <div class='pic' style="background-image: url('/assets/media/day-1/lsl.jpg')"></div>
-          <div class='overlay'></div>
-          <div class='tagline'><a>Haha lol funny</a></div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
+  </div>
 
-    <div class='row mobile-column'>
-      <div class='column'>
-        <div class='small ventus'>
-          <div class='pic' style="background-image: url('/assets/media/day-1/housing.jpg')"></div>
-          <div class='overlay'></div>
-          <div class='tagline'><a>Haha lol funny</a></div>
-        </div>
-        <div class='small terra'>
-          <div class='pic' style="background-image: url('/assets/media/day-1/design.jpg')"></div>
-          <div class='overlay'></div>
-          <div class='tagline'><a>Haha lol funny</a></div>
-        </div>
-      </div>
-      <div class='large aqua'>
-        <div class='pic' style="background-image: url('/assets/media/day-1/lsl.jpg')"></div>
-        <div class='overlay'></div>
-        <div class='tagline'><a>Haha lol funny</a></div>
-      </div>
-    </div>
+  {% endfor %}
 </section>
 {% include footer.html %}
