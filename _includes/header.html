@@ -30,6 +30,9 @@
               <li><a href="http://www.sutd.edu.sg/About-Us/Contact-Us">Support</a></li>
             {% else %}
               <li><a href="/sponsors.html">Sponsors</a></li>
+              {% for day in site.days %}
+              <li><a href='{{ day.url }}'>{{ day.title }}</a></li>
+              {% endfor %}
             {% endif %}
           </ul>
         </nav>

@@ -16,14 +16,14 @@
     <div class='large {{ row.large.theme }}'>
       <div class='pic' style="background-image: url('/assets/media/day-{{ page.day-number }}/{{ row.large.filename }}')"></div>
       <div class='overlay'></div>
-      <div class='tagline'><a>Haha lol funny</a></div>
+      <div class='tagline'><a>{{ row.large.tagline }}</a></div>
     </div>
     <div class='column'>
       {% for image in row.small %}
       <div class='small ferrum'>
         <div class='pic' style="background-image: url('/assets/media/day-{{ page.day-number }}/{{ image.filename }}')"></div>
         <div class='overlay'></div>
-        <div class='tagline'><a>Haha lol funny</a></div>
+        <div class='tagline'><a>{{ image.tagline }}</a></div>
       </div>
       {% endfor %}
     </div>
