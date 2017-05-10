@@ -1,7 +1,7 @@
 {% include header.html %}
 <section class='video column {{ page.theme }}'>
-  <video poster="/assets/media/day-1/vid-poster.png" autoplay='true' loop muted>
-    <source src="/assets/media/day-1/vid.mp4" />
+  <video poster="/assets/media/day-{{ page.day-number }}/vid-poster.png" autoplay='true' loop muted>
+    <source src="/assets/media/day-{{ page.day-number }}/vid.mp4" />
     <source src="" />
   </video>
   <div class='overlay column'>

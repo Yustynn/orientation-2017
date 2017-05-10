@@ -4,7 +4,6 @@ theme: aqua
 title: Day 1
 day-number: 1
 
-
 pics:
   - large:
       filename: design.jpg
