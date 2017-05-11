@@ -1,17 +1,17 @@
 ---
 layout: day
-theme: ventus
-title: Day 1
-day-number: 1
+theme: aqua
+title: Day 2
+day-number: 2
 
 pics:
   - large:
       filename: design.jpg
-      theme: aqua
-      tagline: Haha lol so much funny
+      theme: terra
+      tagline: Haha lol so few funny
     small:
       - filename: lsl.jpg
-        theme: ferrum
+        theme: ventus
         tagline: Haha lol so many funny
       - filename: housing.jpg
         theme: ignis

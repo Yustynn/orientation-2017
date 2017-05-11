@@ -6,8 +6,10 @@
   </section>
   <section class='logos column'>
     <div class='row'>
-    {% for sponsor in page.sponsor_names %}
-    <img src='/assets/media/sponsors/{{ sponsor }}.png' />
+    {% for sponsor in page.sponsors %}
+    <div>
+        <img src='/assets/media/sponsors/{{ sponsor.filename }}' />
+        <p>{{ sponsor.tagline }}</p>
       {% assign idx_mod = forloop.index | modulo: 3 %}
       {% if idx_mod == 0 %}
     </div>
